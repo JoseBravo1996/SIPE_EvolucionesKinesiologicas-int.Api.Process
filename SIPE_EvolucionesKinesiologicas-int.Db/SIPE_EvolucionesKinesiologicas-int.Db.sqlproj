@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SIPE_EvolucionesKinesiologicas-int.Db</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{7d1479d5-dbc8-40f6-a2a1-3982e1b1f878}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath />
+    <RootNamespace>Recover.Db</RootNamespace>
+    <AssemblyName>Recover.Db</AssemblyName>
+    <ModelCollation>3082,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <GenerateCreateScript>True</GenerateCreateScript>
+    <DefaultCollation>Modern_Spanish_CI_AI</DefaultCollation>
+    <AnsiNulls>False</AnsiNulls>
+    <AnsiPadding>False</AnsiPadding>
+    <AnsiWarnings>False</AnsiWarnings>
+    <ArithAbort>False</ArithAbort>
+    <ConcatNullYieldsNull>False</ConcatNullYieldsNull>
+    <QuotedIdentifier>False</QuotedIdentifier>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <PageVerify>CHECKSUM</PageVerify>
+    <QueryStoreCaptureMode>None</QueryStoreCaptureMode>
+    <EnableFullTextSearch>True</EnableFullTextSearch>
+    <TargetDatabase>SIPE_Facturacion.Db</TargetDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Functions" />
+    <Folder Include="Tables" />
+    <Folder Include="Scripts" />
+    <Folder Include="Views" />
+    <Folder Include="Procedures" />
+    <Folder Include="Schemas" />
+    <Folder Include="Scripts\Helpers" />
+    <Folder Include="Procedures\PRT_AgentesCausantes" />
+    <Folder Include="Procedures\PRT_Siniestros" />
+    <Folder Include="Procedures\COM_Clientes" />
+    <Folder Include="Procedures\PRT_SiniestrosTrabajador" />
+    <Folder Include="Procedures\PRT_Prestadores" />
+    <Folder Include="Procedures\GM_Medicos" />
+    <Folder Include="Procedures\GM_EvolucionesExternas_Hist" />
+    <Folder Include="Procedures\PRT_NaturalezaLesion" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schemas\integracion.sql" />
+    <Build Include="Tables\PRT_AgentesCausantes.sql" />
+    <Build Include="Tables\COM_Clientes.sql" />
+    <Build Include="Tables\COM_ClientesPFisicas.sql" />
+    <Build Include="Tables\COM_ClientesPJuridicas.sql" />
+    <Build Include="Tables\PRT_Siniestros.sql" />
+    <Build Include="Procedures\PRT_Siniestros\integracion.SP_InsUpd_PRT_Siniestros.sql" />
+    <Build Include="Procedures\COM_Clientes\integracion.SP_InsUpd_COM_Clientes.sql" />
+    <Build Include="Tables\PRT_SiniestrosTrabajador.sql" />
+    <Build Include="Tables\GEN_Usuarios.sql" />
+    <Build Include="Tables\PRT_Prestadores.sql" />
+    <Build Include="Tables\PRT_PrestadoresEmails.sql" />
+    <Build Include="Tables\GM_Medicos.sql" />
+    <Build Include="Tables\GM_EvolucionesExternas_Hist.sql" />
+    <Build Include="Tables\PRT_NaturalezaLesion.sql" />
+    <Build Include="Procedures\PRT_Prestadores\integracion.SP_InsUpd_PRT_Prestadores.sql" />
+    <Build Include="Procedures\GM_Medicos\integracion.SP_InsUpd_PRT_Medicos.sql" />
+    <Build Include="Procedures\GM_EvolucionesExternas_Hist\integracion.SP_InsUpd_GM_EvolucionesExternas_Hist.sql" />
+    <Build Include="Procedures\PRT_NaturalezaLesion\integracion.SP_InsUpd_PRT_NaturalezaLesion.sql" />
+    <Build Include="Tables\GM_EvolucionesExternas_Intermedia.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Helpers\Script.CleanBD.sql" />
+    <Build Include="Procedures\PRT_AgentesCausantes\integracion.SP_InsUpd_PRT_AgentesCausantes.sql" />
+    <Build Include="Procedures\integracion.SP_InsUpd_DatosIntegracion.sql" />
+    <Build Include="Procedures\PRT_SiniestrosTrabajador\integracion.SP_InsUpd_PRT_SiniestrosTrabajador.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="SIPE_EvolucionesKinesiologicas-int.Db.refactorlog" />
+  </ItemGroup>
+</Project>

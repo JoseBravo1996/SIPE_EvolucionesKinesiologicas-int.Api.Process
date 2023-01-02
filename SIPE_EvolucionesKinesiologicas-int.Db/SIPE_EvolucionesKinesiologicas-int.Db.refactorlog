@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="be5778a9-f8ae-446b-91ab-0a563ec96905" ChangeDateTime="11/17/2020 15:30:48">
+    <Property Name="ElementName" Value="[int].[PRT_CostosActuales].[Date]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[int].[PRT_CostosActuales]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="80450c2a-b3da-4b8b-a6f9-6618958914cd" ChangeDateTime="04/29/2021 13:06:03">
+    <Property Name="ElementName" Value="[dbo].[PRT_EstadosIBM].[intIdEstado]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PRT_EstadosIBM]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="intIdEstadoIBM" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cd6a4d59-8ef8-408a-a0af-68d76e7f121c" ChangeDateTime="04/29/2021 13:10:29">
+    <Property Name="ElementName" Value="[dbo].[PRT_Dictamenes].[intId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PRT_Dictamenes]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="intIdTipoInc" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6086ebb6-b511-4e7a-aa2d-a3e909d480d9" ChangeDateTime="04/29/2021 13:39:26">
+    <Property Name="ElementName" Value="[dbo].[PRT_EstadosAA].[intIdDenuncia]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PRT_EstadosAA]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="intIdEstadoAA" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2ec832d0-352f-459e-ae15-de456752504e" ChangeDateTime="04/29/2021 18:45:56">
+    <Property Name="ElementName" Value="[dbo].[PRT_Consecuencias].[intIdTipoInc]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PRT_Consecuencias]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="intIdConsecuencia" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e27d849f-607c-489d-a2e0-04b75fd27ab8" ChangeDateTime="04/29/2021 18:46:05">
+    <Property Name="ElementName" Value="[dbo].[PRT_Consecuencias].[varTipoIncapacidad]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PRT_Consecuencias]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="varDescripcion" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c6cc6a46-4af4-441f-a9e1-0652ffe0bbf3" ChangeDateTime="05/02/2021 17:48:16">
+    <Property Name="ElementName" Value="[dbo].[RSV_NovedadSentencia].[decHLC]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[RSV_NovedadSentencia]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="intIdHLC" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="82517f9d-78ee-478a-8382-9dfe98b6a44d" ChangeDateTime="07/15/2022 12:45:13">
+    <Property Name="ElementName" Value="[integracion].[PRT_AgentesCausantes].[agentesCausantesDboId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[integracion].[PRT_AgentesCausantes]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="agentesMaterialesDboId" />
+  </Operation>
+</Operations>
